@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "config:base",
+    ":automergeAll",
+    ":masterIssue",
+    ":semanticCommits",
+    ":timezone(Europe/Paris)",
+    "docker:enableMajor",
+    "group:allNonMajor",
+    "schedule:earlyMondays"
+  ],
+  "node": {
+    "supportPolicy": [
+      "active"
+    ]
+  },
+  "postUpdateOptions": [
+    "npmDedupe",
+    "yarnDedupeHighest"
+  ],
+  "rangeStrategy": "pin"
+}
